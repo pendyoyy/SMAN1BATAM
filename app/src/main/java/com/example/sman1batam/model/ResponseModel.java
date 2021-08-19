@@ -21,7 +21,8 @@ public class ResponseModel{
 	@SerializedName("jadwal_ujians")
 	private List<JadwalUjian> jadwalUjians;
 
-
+	@SerializedName("nilaiTugas")
+	public List<Nilai> nilaiTugas;
 
 	public void setSuccess(int success){
 		this.success = success;
@@ -61,5 +62,13 @@ public class ResponseModel{
 
 	public List<JadwalUjian> getJadwalUjians(){
 		return jadwalUjians;
+	}
+
+	public void setNilaiTugas(List<Nilai> nilaiTugas){
+		this.nilaiTugas = nilaiTugas;
+	}
+
+	public List<Nilai> getNilaiTugas(){
+		return nilaiTugas;
 	}
 }

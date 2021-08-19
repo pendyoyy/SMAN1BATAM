@@ -14,6 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SMAN1BATAM"
         android:usesCleartextTraffic="true">
+        <activity android:name=".activity.ActivityNilaiTugas2"></activity>
         <activity android:name=".activity.ActivityJadwalUjian" />
         <activity android:name=".View.ViewJadwalUjian" />
         <activity android:name=".View.ViewJadwalHarian" />

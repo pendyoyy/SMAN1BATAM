@@ -16,6 +16,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.example.sman1batam.R;
 import com.example.sman1batam.activity.ActivityJadwal;
 import com.example.sman1batam.activity.ActivityJadwalUjian;
+import com.example.sman1batam.activity.ActivityNilaiTugas2;
 import com.example.sman1batam.session.PrefSetting;
 import com.example.sman1batam.session.SessionManager;
 import com.example.sman1batam.users.LoginActivity;
@@ -26,7 +27,7 @@ public class HomeSiswa extends AppCompatActivity implements NavigationView.OnNav
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     private Toolbar toolbar;
-    LinearLayout lytJdwH, lytJdwU;
+    LinearLayout lytJdwH, lytJdwU, lytNilai;
 
     SessionManager session;
     SharedPreferences prefs;
@@ -43,6 +44,7 @@ public class HomeSiswa extends AppCompatActivity implements NavigationView.OnNav
         setSupportActionBar(toolbar);
         lytJdwH = findViewById(R.id.lytJdwH);
         lytJdwU = findViewById(R.id.lytJdwU);
+        lytNilai = findViewById(R.id.lyrNilai);
 
         prefSetting = new PrefSetting(this);
         prefs = prefSetting.getSharePreferences();
@@ -69,6 +71,14 @@ public class HomeSiswa extends AppCompatActivity implements NavigationView.OnNav
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HomeSiswa.this, ActivityJadwalUjian.class);
+                startActivity(intent);
+            }
+        });
+
+        lytNilai.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeSiswa.this, ActivityNilaiTugas2.class);
                 startActivity(intent);
             }
         });

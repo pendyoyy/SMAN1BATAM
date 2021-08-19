@@ -9,6 +9,7 @@ import retrofit2.http.FieldMap;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Query;
 
 public interface ApiService {
 
@@ -25,6 +26,11 @@ public interface ApiService {
 
     @GET("jadwalujian")
     Call<ResponseModel> getjadwaluji();
+
+    @GET("nilai/tugas")
+    Call<ResponseModel> getNilai(
+            @Query("user") String nilai
+    );
 
    // @FormUrlEncoded
     //@POST("login")

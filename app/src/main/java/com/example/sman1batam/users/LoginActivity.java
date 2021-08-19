@@ -92,6 +92,7 @@ public class LoginActivity extends AppCompatActivity {
                     edtPassword.setError("Password too Short");
                     edtPassword.requestFocus();
                     return;
+
                 }
                 if (password.length()>30)
                 {
